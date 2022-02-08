@@ -17,8 +17,8 @@ for item in data:
 
     url=f"https://fortnite-api.com/images/cosmetics/br/{item['id']}/icon.png"
     response = urllib.request.urlopen(url)
-    foreground = Image.open(response)
+    skinimg = Image.open(response)
 
-    background.paste(foreground, (0, 0), foreground)
+    background.paste(skinimg, (0, 0), skinimg)
     background.save(f"skins/{item['id']}.png")
 print("Done Generating Images!")
